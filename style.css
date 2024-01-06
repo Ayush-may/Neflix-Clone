@@ -1,0 +1,339 @@
+:root{
+    --red-color: #e50914;
+    --botBorder: rgb(54, 54, 54);
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body{
+    display: grid;
+    /* place-items: center; */
+    background-color: black;
+}
+
+.navbar{
+    padding: 1rem;
+    height: fit-content;
+    display: grid;
+    gap: 300px;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    background-color: transparent;
+}
+
+.navbar > img{
+    width: 200px;
+}
+
+.navbar > div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.navbar > div > button{
+    width: 8rem;
+    height: 2rem;
+    cursor: pointer;
+}
+
+.trans-btn{
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+}
+
+.red-btn{
+    background-color: var(--red-color);
+    border: none;
+    color: white;
+}
+
+.contents{
+    top: 0;
+    width: 100%;
+    /* height: 70vw; */
+    position: absolute;
+}
+
+.contents > div:nth-child(1){
+    /* border: 1px solid red; */
+    height: 65vh;
+    width: 100%;
+    position: relative;
+    /* overflow: hidden; */
+    border-bottom: 8px solid var(--botBorder);
+}
+
+.contents > div:nth-child(2){
+    color: white;
+    /* border: 1px solid blue; */
+}
+
+.contents > div:nth-child(1) > div:nth-child(1){
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    overflow: hidden;
+    /* border-bottom: 8px solid rgb(94, 94, 94); */
+}
+
+.contents > div:nth-child(1) img{
+    object-fit: cover;
+    opacity: 0.5;
+}
+
+
+.contents > div img{
+    width: 100%;
+    height: 100%;
+}
+
+.contents > div:nth-child(1) > div:nth-child(2){
+    height: 100%;
+    display: grid;
+    place-items: center;
+    color: white;
+}
+
+.contents > div:nth-child(1) > div:nth-child(2) > div{
+    display: grid;
+    place-items: center;
+    gap: 10px;
+}
+
+.contents > div > div:nth-child(2) > div p:nth-child(1){
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+.contents > div:nth-child(1) > div:nth-child(2) > div p:nth-child(2),
+.contents > div:nth-child(1) > div:nth-child(2) > div p:nth-child(3),
+.sameText{
+    text-wrap: wrap;
+    font-size: 1.5rem;
+}
+
+.stack-contents img{
+    max-width: 80%;
+}
+
+.stack-contents > div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 3rem 10rem;
+    place-items: center;
+    border-bottom: 8px solid var(--botBorder);
+}
+
+.stack-contents > div > div > p:nth-child(1){
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.stack-contents > div > div > p:nth-child(2){
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.email-signin{
+    height: 4rem;
+}
+
+.email-signin *{
+    font-size: 1.2rem;
+    border-radius: 3px;
+}
+
+.email-signin input{
+    width: 30rem;
+    color: white;
+    height: 100%;
+    padding: 0 0 0 1rem;
+    margin: 1rem 1rem 0 0;
+    /* padding: 2rem 1rem 1rem 1rem; */
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid grey;
+    /* border: 1px solid blue; */
+}
+
+.email-signin button{
+    width: 10rem;
+    height: 100%;
+    /* padding: 2rem 1rem 2rem 1rem; */
+}
+
+/* .email-signin input::before{
+    content: 'Email Address';
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    color: black;
+    background-color: blue;
+} */
+
+.FAQs-contents{
+    padding: 4rem 0;
+    display: grid;
+    justify-items: center;
+    color: white;
+    border-bottom: 8px solid var(--botBorder);
+}
+
+.FAQs-contents > p:nth-child(1){
+    font-size: 4rem;
+    color: white;
+    font-weight: bold;
+    padding: 0rem 0 2rem 0;
+}
+
+.FAQs-contents > div:nth-child(2){
+    /* border: 1px solid red; */
+}
+
+.FAQs-contents > div:nth-child(2) > p{
+    padding: 1.6rem 0 0 2rem;
+    width: 75vw;
+    height: 5rem;
+    align-items: center;
+    font-size: 1.5rem;
+    margin: 10px 0;
+    background-color: #2d2d2d;
+    cursor: pointer;
+}
+
+.FAQs-contents > div:nth-child(2) > p:hover{
+    filter: brightness(1.5);
+}
+
+.FAQs-contents > div:nth-child(3){
+    margin-top: 2rem;
+    display: grid;
+    place-items: center;
+}
+
+button{
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+    .contents > div > div:nth-child(2) > div p:nth-child(1){
+        font-size: 2.5rem;
+    }
+
+    .contents > div > div:nth-child(2) > div p:nth-child(2),
+    .contents > div > div:nth-child(2) > div p:nth-child(3),
+    .sameText{
+        font-size: 1.2rem;
+    }
+
+    .email-signin input{
+        width: 27rem;
+    }
+
+    .stack-contents > div > div > p:nth-child(1){
+        font-size: 2.5rem;
+    }
+
+    .stack-contents > div > div > p:nth-child(2){
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .contents > div > div:nth-child(2) > div p:nth-child(1){
+        font-size: 2rem;
+    }
+    
+    .contents > div:nth-child(1) > div:nth-child(2) > div p:nth-child(2),
+    .contents > div:nth-child(1) > div:nth-child(2) > div p:nth-child(3),
+    .sameText{
+        border: 1px solid red;
+        font-size: 1rem;
+        text-align: center;
+        text-wrap: wrap;
+    }
+    
+    .navbar{
+        gap: 150px;
+    }
+
+    .email-signin{
+        height: 9rem;
+        place-items: center;
+        row-gap: 2rem;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .contents > div:nth-child(1) > div:nth-child(2) > div{
+        margin-top: 4rem;
+    }
+
+    .stack-contents > div:nth-child(odd){
+        text-align: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: 200px 1fr;
+        padding: 0 2rem;
+    }
+
+    .stack-contents > div:nth-child(even){
+        text-align: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 200px;
+        padding: 5rem 2rem;
+    }
+
+    .stack-contents > div > div > p:nth-child(1){
+        font-size: 1.7rem;
+    }
+
+    .stack-contents > div > div > p:nth-child(2){
+        font-size: 1rem;
+    }
+}
+
+/* below 800px */
+@media screen and (max-width: 800px){
+    .contents > div > div:nth-child(2) > div p:nth-child(1){
+        font-size: 1.7rem;
+        text-align: center;
+    }
+
+    .navbar > img{
+        width: 150px;
+    }
+
+    .navbar > div > button{
+        width: 5rem;
+    }
+
+    .email-signin input{
+        width: 25rem;
+    }
+
+}
+
+@media screen and (max-width: 600px){
+    .navbar{
+        gap: 50px;
+    }
+
+    .navbar > div > button{
+        width: 3.5rem;
+    }
+}
